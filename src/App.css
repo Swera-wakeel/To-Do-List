@@ -1,38 +1,136 @@
+/* General App Styling */
 .App {
   text-align: center;
+  padding: 20px;
+  background-color: #d5d5ff; /* Soft background color */
+  font-family: Arial, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  color: #333;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+/* Placeholder Style */
+.add-task-form input[type="text"]::placeholder {
+  color: #6284a3; /* Change the color of the placeholder text */
+  font-style: italic; /* Add italic styling */
+  opacity: 1; /* Ensure full opacity for visibility */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+/* Task List Styling */
+.task-list {
+  margin: 20px auto;
+  width: 80%; /* Make it responsive */
+  max-width: 500px; /* Restrict max width */
+  background-color: #cbf0ff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+  padding: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Individual Task Styling */
+.task {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+  transition: background-color 0.3s ease;
+}
+
+.task:last-child {
+  border-bottom: none; /* Remove bottom border for the last item */
+}
+
+.task:hover {
+  background-color: #84bdee; /* Light hover effect */
+}
+
+/* Task Buttons */
+button {
+  background-color: #1a4058;
   color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Add smooth transition */
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  background-color: #225a5e;
+  transform: scale(1.05); /* Slightly enlarge on hover */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button:active {
+  background-color: #1e7e34; /* Slightly darker when active */
+  transform: scale(0.98); /* Slightly shrink when clicked */
+}
+
+/* Navigation Links */
+nav {
+  margin-bottom: 20px;
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #1e3249;
+  font-weight: bold;
+  font-size: 1.1em;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+nav a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* Add Task Form Styling */
+.add-task-form {
+  margin: 30px auto;
+  width: 80%;
+  max-width: 500px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.add-task-form input[type="text"],
+.add-task-form select {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.add-task-form input[type="text"]:focus,
+.add-task-form select:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.add-task-form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-task-form button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.add-task-form button:active {
+  background-color: #004085;
+  transform: scale(0.98);
 }
